@@ -1,0 +1,102 @@
+###
+GET /hello
+
+###
+POST http://localhost:8080/users
+
+###
+GET /api/post_favour
+
+###
+GET http://localhost:8090/health
+
+### 登录校验
+POST http://localhost:8080/api/auth/v1/admin-login
+Content-Type: application/json
+
+{
+  "email": "king1980105@163.com",
+  "password": "123456"
+}
+
+### 列表
+POST http://localhost:8080/api/backend/v1/users
+Content-Type: application/json
+
+{
+  "isDelete": 0,
+  "name": "",
+  "gender": "",
+  "mobile": "",
+  "email": "1732446549@qq.com",
+  "status": 0,
+  "createdAt": "",
+  "updateAt": "",
+  "current": 0,
+  "pageSize": 0,
+  "sortField": "",
+  "sortOrder": ""
+}
+
+
+### 添加用户
+POST http://localhost:8080/api/backend/v1/create-user
+Content-Type: application/json
+
+// 添加数据
+{
+  "name": "abc",
+  "password": "123",
+  "passwordConfirmation": "123",
+  "email": "17324469@qq.com",
+  "mobile": "19221212121",
+  "gender": "1",
+  "status": 1,
+  "date_string": "2024-10-11"
+}
+
+
+### 两次密码不一致的情况
+POST http://localhost:8080/api/backend/v1/create-user
+Content-Type: application/json
+
+{
+  "name": "dduo",
+  "password": "123",
+  "passwordConfirmation": "1323",
+  "email": "17324469@qq.com",
+  "mobile": "19221212121",
+  "gender": "1",
+  "status": 1,
+  "date_string": "2024-10-11"
+}
+
+### 修改用户
+POST http://localhost:8080/api/backend/v1/update-user
+Content-Type: application/json
+
+{
+  "name": "duo",
+  "id": 1843905987335888898,
+  "email": "12312",
+  "mobile": "321",
+  "gender": "32",
+  "status": 0,
+  "date_string": ""
+}
+
+
+### 删除用户
+POST http://localhost:8080/api/backend/v1/delete-user
+Content-Type: application/json
+
+{
+  "name": "Tam Siu Wai",
+  "id": 1843905000063848449,
+  "email": "",
+  "mobile": "",
+  "gender": "",
+  "status": 0,
+  "date_string": ""
+}
+

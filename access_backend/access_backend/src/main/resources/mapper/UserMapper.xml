@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.dduo.access_backend.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="work.dduo.access_backend.model.entity.User">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <id property="isDelete" column="Is_Delete" jdbcType="TINYINT"/>
+            <result property="name" column="Name" jdbcType="VARCHAR"/>
+            <result property="gender" column="Gender" jdbcType="VARCHAR"/>
+            <result property="mobile" column="Mobile" jdbcType="VARCHAR"/>
+            <result property="email" column="Email" jdbcType="VARCHAR"/>
+            <result property="status" column="Status" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="Created_At" jdbcType="TIMESTAMP"/>
+            <result property="updateAt" column="Update_At" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,Is_Delete,Name,
+        Gender,Mobile,Email,
+        Status,Created_At,Update_At
+    </sql>
+</mapper>
